@@ -1,0 +1,194 @@
+<?php
+$tool1_DOE_score = ${"tool1_DOE_score_emt$emt_id"};
+$tool2_DOE_score = ${"tool2_DOE_score_emt$emt_id"};
+$tool3_DOE_score = ${"tool3_DOE_score_emt$emt_id"};
+$tool4_DOE_score = ${"tool4_DOE_score_emt$emt_id"};
+$tool5_DOE_score = ${"tool5_DOE_score_emt$emt_id"};
+$tool6_DOE_score = ${"tool6_DOE_score_emt$emt_id"};
+$tool7_DOE_score = ${"tool7_DOE_score_emt$emt_id"};
+
+$tool1_DOE_score = $tool1_DOE_score ? ($tool1_DOE_score * $tool_weightage[0]->tool_full_score) / 100 : '0';
+$tool2_DOE_score = $tool2_DOE_score ? ($tool2_DOE_score * $tool_weightage[1]->tool_full_score) / 100 : '0';
+$tool3_DOE_score = $tool3_DOE_score ? ($tool3_DOE_score * $tool_weightage[2]->tool_full_score) / 100 : '0';
+$tool7_DOE_score = $tool7_DOE_score ? ($tool7_DOE_score * $tool_weightage[6]->tool_full_score) / 100 : '0';
+
+if($no_of_rules > 0){
+$tool4_DOE_score = $tool4_DOE_score ? round((($tool4_DOE_score * $tool_weightage[3]->tool_full_score) / 100) / $no_of_rules, 2)  : '0';
+$tool5_DOE_score = $tool5_DOE_score ? round((($tool5_DOE_score * $tool_weightage[4]->tool_full_score) / 100) / $no_of_rules, 2) : '0';
+$tool6_DOE_score = $tool6_DOE_score ? round((($tool6_DOE_score * $tool_weightage[5]->tool_full_score) / 100) / $no_of_rules, 2) : '0';
+} else {
+  $tool4_DOE_score = $tool4_DOE_score ? ($tool4_DOE_score * $tool_weightage[3]->tool_full_score) / 100 : '0';
+  $tool5_DOE_score = $tool5_DOE_score ? ($tool5_DOE_score * $tool_weightage[4]->tool_full_score) / 100 : '0';
+  $tool6_DOE_score = $tool6_DOE_score ? ($tool6_DOE_score * $tool_weightage[5]->tool_full_score) / 100 : '0';
+}
+
+
+$tool1_premise_score = $answers2->tool1_implementation == 'false' ? 0 : $answers2->tool1_score_premise / 100 * $tool_weightage[0]->tool_full_score;
+$tool2_premise_score = $answers2->tool2_implementation == 'false' ? 0 : $answers2->tool2_score_premise / 100 * $tool_weightage[1]->tool_full_score;
+$tool3_premise_score = $answers2->tool3_implementation == 'false' ? 0 : $answers2->tool3_score_premise / 100 * $tool_weightage[2]->tool_full_score;
+$tool4_premise_score = $answers2->tool4_implementation == 'false' ? 0 : $answers2->tool4_score_premise / 100 * $tool_weightage[3]->tool_full_score;
+$tool5_premise_score = $answers2->tool5_implementation == 'false' ? 0 : $answers2->tool5_score_premise / 100 * $tool_weightage[4]->tool_full_score;
+$tool6_premise_score = $answers2->tool6_implementation == 'false' ? 0 : $answers2->tool6_score_premise / 100 * $tool_weightage[5]->tool_full_score;
+$tool7_premise_score = $answers2->tool7_implementation == 'false' ? 0 : $answers2->tool7_score_premise / 100 * $tool_weightage[6]->tool_full_score;
+?>
+
+<?php
+//STATUS FLAG
+if(isset($emtStat_PN->tool1_PN)){
+    $tool1_PN = ($emtStat_PN->tool1_PN) ? 'Completed' : 'Not Completed';
+} else { $tool1_PN = '';}
+
+if(isset($emtStat_PN->tool2_PN)){
+    $tool2_PN = ($emtStat_PN->tool2_PN) ? 'Completed' : 'Not Completed';
+} else { $tool2_PN = '';}
+
+if(isset($emtStat_PN->tool3_PN)){
+    $tool3_PN = ($emtStat_PN->tool3_PN) ? 'Completed' : 'Not Completed';
+} else { $tool3_PN = '';}
+
+if(isset($emtStat_PN->tool4_PN)){
+    $tool4_PN = ($emtStat_PN->tool4_PN) ? 'Completed' : 'Not Completed';
+} else { $tool4_PN = '';}
+
+if(isset($emtStat_PN->tool5_PN)){
+    $tool5_PN = ($emtStat_PN->tool5_PN) ? 'Completed' : 'Not Completed';
+} else { $tool5_PN = '';}
+
+if(isset($emtStat_PN->tool6_PN)){
+    $tool6_PN = ($emtStat_PN->tool6_PN) ? 'Completed' : 'Not Completed';
+} else { $tool6_PN = '';}
+
+if(isset($emtStat_PN->tool7_PN)){
+    $tool7_PN = ($emtStat_PN->tool7_PN) ? 'Completed' : 'Not Completed';
+} else { $tool7_PN = '';}
+
+////////////////////////////////////////////////////////////////////////
+
+if(isset($emtStat_PL->tool1)){
+    $tool1_PL = ($emtStat_PL->tool1) ? 'Completed' : 'Not Completed';
+} else { $tool1_PL = '';}
+
+if(isset($emtStat_PL->tool2)){
+    $tool2_PL = ($emtStat_PL->tool2) ? 'Completed' : 'Not Completed';
+} else { $tool2_PL = '';}
+
+if(isset($emtStat_PL->tool3)){
+    $tool3_PL = ($emtStat_PL->tool3) ? 'Completed' : 'Not Completed';
+} else { $tool3_PL = '';}
+
+if(isset($emtStat_PL->tool4)){
+    $tool4_PL = ($emtStat_PL->tool4) ? 'Completed' : 'Not Completed';
+} else { $tool4_PL = '';}
+
+if(isset($emtStat_PL->tool5)){
+    $tool5_PL = ($emtStat_PL->tool5) ? 'Completed' : 'Not Completed';
+} else { $tool5_PL = '';}
+
+if(isset($emtStat_PL->tool6)){
+    $tool6_PL = ($emtStat_PL->tool6) ? 'Completed' : 'Not Completed';
+} else { $tool6_PL = '';}
+
+if(isset($emtStat_PL->tool7)){
+    $tool7_PL = ($emtStat_PL->tool7) ? 'Completed' : 'Not Completed';
+} else { $tool7_PL = '';}
+?>
+<table class="table table-striped">
+    <thead>
+    <th>EMT No</th>
+    <th>Description</th>
+    <th>Status By Premise</th>
+    <th>Status By Penyelia</th>
+    <th>Status By Pelulus</th>
+    <th>Weightage</th> 
+    <th>Score (Premise)</th>
+    <th>Score (DOE)</th>
+    <th>Comment</th>
+</thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td><a href="<?= base_url('answers/answersbaru/' . $idpremis . '/' . $emt_id) ?>#tab-1" target="_blank">ENVIRONMENTAL POLICY (EP)</a></td>
+        <td><?= ($answers2->tool1_implementation) ? 'Completed' : 'Not implemented'; ?></td>
+        <td><?= $tool1_PN ?></td>
+        <td><?= $tool1_PL ?></td>
+        <td><?= $tool_weightage[0]->tool_full_score ?></td>
+        <td><?= $tool1_premise_score ?></td>
+        <td><?= $tool1_DOE_score ?></td>
+        <td><?= isset($tool1_review) ? $tool1_review->comment : ''; ?></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="<?= base_url('answers/answersbaru/' . $idpremis . '/' . $emt_id) ?>#tab-2" target="_blank">ENVIRONMENTAL BUDGET (EB)</a></td>
+        <td><?= ($answers2->tool2_implementation) ? 'Completed' : 'Not implemented'; ?></td>
+        <td><?= $tool2_PN ?></td>
+        <td><?= $tool2_PL ?></td>
+        <td><?= $tool_weightage[1]->tool_full_score ?></td>
+        <td><?= $tool2_premise_score ?></td>
+        <td><?= $tool2_DOE_score ?></td>
+        <td><?= isset($tool2_review) ? $tool2_review->comment : ''; ?></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="<?= base_url('answers/answersbaru/' . $idpremis . '/' . $emt_id) ?>#tab-3" target="_blank">ENVIRONMENTAL MONITORING COMMITTEE (EMC)</a></td>
+        <td><?= ($answers2->tool3_implementation) ? 'Completed' : 'Not implemented'; ?></td>
+        <td><?= $tool3_PN ?></td>
+        <td><?= $tool3_PL ?></td>
+        <td><?= $tool_weightage[2]->tool_full_score ?></td>
+        <td><?= $tool3_premise_score ?></td>
+        <td><?= $tool3_DOE_score ?></td>
+        <td><?= isset($tool3_review) ? $tool3_review->comment : ''; ?></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><a href="<?= base_url('answers/answersbaru/' . $idpremis . '/' . $emt_id) ?>#tab-4" target="_blank">ENVIRONMENTAL FACILITIES (EF)</a></td>
+        <td><?= ($answers2->tool4_implementation) ? 'Completed' : 'Not implemented'; ?></td>
+        <td><?= $tool4_PN ?></td>
+        <td><?= $tool4_PL ?></td>
+        <td><?= $tool_weightage[3]->tool_full_score ?></td>
+        <td><?= $tool4_premise_score ?></td>
+        <td><?= $tool4_DOE_score ?></td>
+        <td><?= isset($tool4_review) ? $tool4_review->comment : ''; ?></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><a href="<?= base_url('answers/answersbaru/' . $idpremis . '/' . $emt_id) ?>#tab-5" target="_blank">ENVIRONMENTAL COMPETENCY (EC)</a></td>
+        <td><?= ($answers2->tool5_implementation) ? 'Completed' : 'Not implemented'; ?></td>
+        <td><?= $tool5_PN ?></td>
+        <td><?= $tool5_PL ?></td>
+        <td><?= $tool_weightage[4]->tool_full_score ?></td>
+        <td><?= $tool5_premise_score ?></td>
+        <td><?= $tool5_DOE_score ?></td>
+        <td><?= isset($tool5_review) ? $tool5_review->comment : ''; ?></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><a href="<?= base_url('answers/answersbaru/' . $idpremis . '/' . $emt_id) ?>#tab-6" target="_blank">ENVIRONMENTAL REPORTING & COMMUNICATION (ERC)</a></td>
+        <td><?= ($answers2->tool6_implementation) ? 'Completed' : 'Not implemented'; ?></td>
+        <td><?= $tool6_PN ?></td>
+        <td><?= $tool6_PL ?></td>
+        <td><?= $tool_weightage[5]->tool_full_score ?></td>
+        <td><?= $tool6_premise_score ?></td>
+        <td><?= $tool6_DOE_score ?></td>
+        <td><?= isset($tool6_review) ? $tool6_review->comment : ''; ?></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td><a href="<?= base_url('answers/answersbaru/' . $idpremis . '/' . $emt_id) ?>#tab-7" target="_blank">ENVIRONMENTAL TRANSPARENCY (ET)</a></td>
+        <td><?= ($answers2->tool7_implementation) ? 'Completed' : 'Not implemented'; ?></td>
+        <td><?= $tool7_PN ?></td>
+        <td><?= $tool7_PL ?></td>
+        <td><?= $tool_weightage[6]->tool_full_score ?></td>
+        <td><?= $tool7_premise_score ?></td>
+        <td><?= $tool7_DOE_score ?></td>
+        <td><?= isset($tool7_review) ? $tool7_review->comment : ''; ?></td>
+    </tr>
+    <tr>
+        <td colspan="6">Total</td>
+        <td><?= $tool1_premise_score + $tool2_premise_score + $tool3_premise_score + $tool4_premise_score + $tool5_premise_score + $tool6_premise_score + $tool7_premise_score ?></td>
+        <td><?php
+            echo $tool1_DOE_score + $tool2_DOE_score + $tool3_DOE_score + $tool4_DOE_score + $tool5_DOE_score + $tool6_DOE_score + $tool7_DOE_score;
+            ?>         
+        </td>
+    </tr>
+</tbody>
+</table>

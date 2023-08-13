@@ -1,0 +1,84 @@
+body {
+    background-color: #2e6da4;
+     font-family: 'Encode Sans Expanded', sans-serif;
+     font-size:small;
+    
+}
+
+.status-option{
+                color : red;
+                font-style: italic;
+            }
+            
+.container {
+    border: 1px solid #a59c9c;
+    padding: 0;
+    box-shadow: 5px 5px 10px 5px #2e6da4;
+}
+#xheader {
+    border: 0px solid green;
+    height: 200px;
+    background-color: #fff; 
+    background-image: url('../images/banner.jpg');
+    background-repeat: no-repeat;
+}
+
+#xheader2 {
+    border: 0px solid green;
+    height: 200px;
+    background-color: #fff; 
+    background-image: url('../images/banner.jpg');
+    background-repeat: no-repeat;
+}
+#xhead {
+    border: 0px solid green;
+    height: 100px;
+    background-color: #fff; 
+    background-image: url('../images/header.fw.png');
+    background-repeat: no-repeat;
+}
+
+
+#xmenu {
+    /*background-color: #336699; */
+}
+
+#xmenu a {
+    /*color: white;*/
+}
+
+#xcontent {
+    background-color: #fff;
+    min-height: 450px;
+    border: 0px solid green;
+    padding: 5px;
+}
+
+#xfooter {
+    border: 0px solid green;
+    background-color: #336699;
+    color:#9d9d9d;
+}
+
+table {
+    margin-top: 4px;
+}
+
+div.row {
+    margin: 0;
+    margin-top: 4px;
+}
+
+.xbox {
+    border-top: 1px solid #ddd; 
+}
+
+.navbar {
+    margin: 0;  
+    padding: 0;
+}
+
+.footer-bg{
+   
+}
+

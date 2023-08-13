@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="Group 20180516-08:09:11">
+            <file>file:/C:/xampp/htdocs/emains/theme1/assets/smart-wizard_config.js</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/answers/view_answers_awesomely_2_1.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/models/Remark_model.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/controllers/Remark.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/ulasan/form.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/answers/view_doe_answers_awesomely_2_1.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/answers/list.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/ulasan/list.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/dashboard/dashboard_premise.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/new_theme.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/controllers/Questions.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/new_theme_iframe.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/controllers/Answers.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/controllers/Dashboard.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/ulasan/officer_form.php</file>
+        </group>
+        <group name="Group 20180913-12:54:45">
+            <file>file:/C:/xampp/htdocs/emains/application/views/kpi/monthly_report_tools.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/controllers/Questions.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/answers/review.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/controllers/Answers.php</file>
+            <file>file:/C:/xampp/htdocs/emains/application/views/kpi/monthly_report_bm.php</file>
+        </group>
+        <group name="Group 20180919-09:42:03"/>
+    </open-files>
+</project-private>
